@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/connexion', 'ConnexionController@formulaire');
+Route::post('/connexion', 'ConnexionController@traitement');
+
+Route::get('/inscription', 'ConnexionController@inscrireFormulaire');
+Route::post('/inscription', 'ConnexionController@inscrireUtilisateur');
