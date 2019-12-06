@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/inscription', 'InscriptionController@afficherFormulaire');
+Route::post('/inscription', 'InscriptionController@traiterFormulaire');
