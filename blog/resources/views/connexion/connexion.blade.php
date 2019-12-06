@@ -1,3 +1,7 @@
+@extends('layout')
+
+@section('contenu')
+<div class="container">
     <form action="{{ action('ConnexionController@traitement') }}" method="post" class="section">
         {{ csrf_field() }}
 
@@ -7,7 +11,7 @@
                 <input class="input" type="text" name="nomutilisateur" value="{{ old('email') }}">
             </div>
             @if($errors->has('email'))
-                <p class="help is-danger">{{ $errors->first('email') }}</p>
+            <p class="help is-danger">{{ $errors->first('email') }}</p>
             @endif
         </div>
 
@@ -17,7 +21,7 @@
                 <input class="input" type="password" name="password">
             </div>
             @if($errors->has('password'))
-                <p class="help is-danger">{{ $errors->first('password') }}</p>
+            <p class="help is-danger">{{ $errors->first('password') }}</p>
             @endif
         </div>
 
@@ -27,3 +31,5 @@
             </div>
         </div>
     </form>
+</div>
+@endsection

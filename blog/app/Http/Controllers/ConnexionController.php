@@ -30,8 +30,6 @@ class ConnexionController extends Controller
         // À faire : vérification que l'email et le mot de passe sont corrects.
         $user = DB::table('p1_utilisateur')->where('nomutilisateur', request()->input('nomutilisateur'))->get();
         if (Hash::check(request()->input('nomutilisateur'), $user[0]->password)){
-            echo "connecté";
-            die;
             $request->session()->put('idUtilisateur', $user[0]->id);
             $request->session()->put('role', $user[0]->role);
             return view('connexion/connexion');
