@@ -14,14 +14,16 @@ class Article extends BaseController
     public function afficherArticle($id){ 
         switch ($id) {
             case 0:
-                //return view('article');
-                echo "nice";
+                return view('article.alimentaire');
                 break;
             case 1:
-                return view('article');
+                return view('article.associations');
                 break;
             case 2:
-                return view('article');
+                return view('article.logement');
+                break;
+            case 3:
+                return view('article.transport');
                 break;
         }
     }
