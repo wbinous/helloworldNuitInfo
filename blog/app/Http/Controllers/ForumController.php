@@ -20,6 +20,10 @@ class ForumController extends Controller
 
     public function afficherSujet($id){
         // recuperer les posts du sujet
+        $sujet = DB::table('p1_forummessage')
+            ->join('p1_forummessage', 'p1_forum.id', '=', 'p1_forummessage.forumId')
+            ->where('p1_forummessage.forumId', $id)->get();
+        // afficher
         return view('forum/sujet');
     }
 

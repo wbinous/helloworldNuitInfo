@@ -51,7 +51,7 @@
             </a>
           </div>
         </div>
-        <a class="navbar-item">
+        <a href="/forum" class="navbar-item">
           Forum
         </a>
         <a class="navbar-item">
