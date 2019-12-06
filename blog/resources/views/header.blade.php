@@ -62,11 +62,11 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
+            <a class="button is-primary" href="/inscription">
+              <strong>S'inscrire</strong>
             </a>
-            <a class="button is-light">
-              Log in
+            <a class="button is-light" href="/connexion">
+              Se connecter
             </a>
           </div>
         </div>
