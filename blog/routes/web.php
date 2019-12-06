@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/forum', 'ForumController@listeSujets');
+Route::get('/voirSujet/{id}', 'ForumController@afficherSujet');
+
 Route::get('/connexion', 'ConnexionController@formulaire');
 Route::post('/connexion', 'ConnexionController@traitement');
 
