@@ -32,10 +32,18 @@ class ConnexionController extends Controller
         if (Hash::check(request()->input('nomutilisateur'), $user[0]->password)){
             echo "connecté";
             die;
+            $request->session()->put('idUtilisateur', $user[0]->id);
+            $request->session()->put('role', $user[0]->role);
             return view('connexion/connexion');
         }
 
         echo "pas connecté";
+    }
+
+    public function deconnexion(Request $request){
+        $request->session()->forget('idUtilisateur');
+        $request->session()->forget('role');
+        $request->session()->flush();
     }
 
     public function inscrireFormulaire() {

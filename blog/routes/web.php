@@ -21,6 +21,8 @@ Route::post('/connexion', 'ConnexionController@traitement');
 Route::get('/inscription', 'ConnexionController@inscrireFormulaire');
 Route::post('/inscription', 'ConnexionController@inscrireUtilisateur');
 
+Route::post('/deconnexion', 'ConnexionController@deconnexion');
+
 Route::view('/article/alimentaire','/article/alimentaire');
 Route::view('/article/associations','/article/associations');
 Route::view('/article/finance','/article/aidefinance');
