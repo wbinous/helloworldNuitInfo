@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('accueil.accueil');
 });
+
+Route::get('article/{id}', 'Article@afficherArticle');
